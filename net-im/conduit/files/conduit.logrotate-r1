@@ -1,0 +1,7 @@
+/var/log/conduit/*.log {
+	missingok
+	compress
+	notifempty
+	copytruncate
+	minsize 1M
+}

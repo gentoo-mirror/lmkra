@@ -1,0 +1,9 @@
+# conduit configuration file
+#CONDUIT_CONFIG="/etc/conduit/conduit.toml"
+
+# conduit log location
+#CONDUIT_LOG_DIR=/var/log/conduit
+
+# run conduit process as following user/group
+# CONDUIT_USER=conduit
+# CONDUIT_GROUP=conduit

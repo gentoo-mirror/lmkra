@@ -1,0 +1,14 @@
+BDEPEND=sys-devel/clang >=dev-lang/rust-1.70.0 >=virtual/rust-1.53 >=dev-vcs/git-1.8.2.1[curl]
+DEFINED_PHASES=compile configure install test unpack
+DEPEND=acct-user/conduit
+DESCRIPTION=Matrix homeserver written in Rust
+EAPI=8
+HOMEPAGE=https://gitlab.com/famedly/conduit
+INHERIT=cargo git-r3
+IUSE=jemalloc +rocksdb +sqlite debug
+LICENSE=Apache-2.0
+PROPERTIES=live
+RDEPEND=acct-user/conduit
+SLOT=0
+_eclasses_=toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	cargo	8520ae1bed0e6965d027399b471a3595	git-r3	2358a7b20091609e24bd3a83b3ac5991
+_md5_=44e3c1dcb5a30d7201505bded8a8908f

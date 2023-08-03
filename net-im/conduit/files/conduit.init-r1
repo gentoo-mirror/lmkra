@@ -1,0 +1,21 @@
+#!/sbin/openrc-run
+# Copyright 2023 lmkra
+# Distributed under the terms of GNU General Public License v3
+
+CONDUIT_CONFIG=${CONDUIT_CONFIG:-/etc/conduit/conduit.toml}
+CONDUIT_LOG_DIR=${CONDUIT_LOG_DIR:-/var/log/conduit}
+CONDUIT_USER=${CONDUIT_USER:-conduit}
+CONDUIT_GROUP=${CONDUIT_GROUP:-conduit}
+
+name="Conduit"
+
+pidfile="/run/conduit.pid"
+command="/usr/bin/conduit"
+command_background="true"
+command_user="${CONDUIT_USER}:${CONDUIT_GROUP}"
+output_log="${CONDUIT_LOG_DIR}/conduit.log"
+error_log="${CONDUIT_LOG_DIR}/conduit.log"
+start_stop_daemon_args="${start_stop_daemon_args} -e CONDUIT_CONFIG=${CONDUIT_CONFIG}"
+retry=30
+
+required_files="${CONDUIT_CONFIG}"
