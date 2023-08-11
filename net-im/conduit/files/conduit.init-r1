@@ -4,8 +4,8 @@
 
 CONDUIT_CONFIG=${CONDUIT_CONFIG:-/etc/conduit/conduit.toml}
 CONDUIT_LOG_DIR=${CONDUIT_LOG_DIR:-/var/log/conduit}
-CONDUIT_USER=${CONDUIT_USER:-conduit}
-CONDUIT_GROUP=${CONDUIT_GROUP:-conduit}
+CONDUIT_USER=${CONDUIT_USER:-matrix}
+CONDUIT_GROUP=${CONDUIT_GROUP:-matrix}
 
 name="Conduit"
 
@@ -19,3 +19,9 @@ start_stop_daemon_args="${start_stop_daemon_args} -e CONDUIT_CONFIG=${CONDUIT_CO
 retry=30
 
 required_files="${CONDUIT_CONFIG}"
+
+depend() {
+	use dns
+	need net
+	provide matrix-homeserver
+}

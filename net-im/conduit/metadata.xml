@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>lmkrawiec@gmail.com</email>
+		<name>lmkra</name>
+	</maintainer>
+	<use>
+		<flag name="rocksdb">add support for rocksdb database</flag>
+	</use>
+	<upstream>
+		<remote-id type="gitlab">famedly/conduit</remote-id>
+	</upstream>
+</pkgmetadata>

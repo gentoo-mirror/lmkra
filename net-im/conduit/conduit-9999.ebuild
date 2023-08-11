@@ -17,7 +17,7 @@ SLOT="0"
 # skipped systemd support for now
 IUSE="jemalloc +rocksdb +sqlite"
 
-RDEPEND="acct-user/conduit"
+RDEPEND="acct-user/matrix"
 DEPEND="${RDEPEND}"
 BDEPEND="sys-devel/clang >=dev-lang/rust-1.70.0"
 
@@ -49,14 +49,14 @@ src_install() {
 	cargo_src_install
 
 	keepdir /var/{lib,log}/conduit
-	fowners conduit:conduit /var/{lib,log}/conduit
+	fowners matrix:matrix /var/{lib,log}/conduit
 	fperms 700 /var/{lib,log}/conduit
 
 	newconfd "${FILESDIR}"/conduit.conf-r1 conduit
 	newinitd "${FILESDIR}"/conduit.init-r1 conduit
 
 	insinto /etc/conduit
-	newins "${S}"/conduit-example.toml conduit.toml
+	newins conduit-example.toml conduit.toml
 
 	insinto /etc/logrotate.d
 	newins "${FILESDIR}"/conduit.logrotate-r1 conduit

@@ -5,8 +5,8 @@ EAPI=8
 
 inherit acct-user
 
-DESCRIPTION="User for conduit Matrix server"
+DESCRIPTION="User for all Matrix-related daemons"
 ACCT_USER_ID=601
-ACCT_USER_GROUPS=( conduit )
+ACCT_USER_GROUPS=( matrix )
 
 acct-user_add_deps
