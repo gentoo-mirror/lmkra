@@ -1,0 +1,6 @@
+# configuration file
+#MAUTRIX_WHATSAPP_CONFIG="/etc/mautrix/whatsapp.yaml"
+
+# run mautrix-whatsapp process as following user/group
+#MAUTRIX_WHATSAPP_USER=matrix
+#MAUTRIX_WHATSAPP_USER=matrix

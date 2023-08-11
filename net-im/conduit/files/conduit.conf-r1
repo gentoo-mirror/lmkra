@@ -5,5 +5,5 @@
 #CONDUIT_LOG_DIR=/var/log/conduit
 
 # run conduit process as following user/group
-# CONDUIT_USER=matrix
-# CONDUIT_GROUP=matrix
+#CONDUIT_USER=matrix
+#CONDUIT_GROUP=matrix

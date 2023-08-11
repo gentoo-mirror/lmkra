@@ -1,0 +1,24 @@
+#!/sbin/openrc-run
+# Copyright 2023 lmkra
+# Distributed under the terms of GNU General Public License v3
+
+MAUTRIX_WHATSAPP_CONFIG=${MAUTRIX_WHATSAPP_CONFIG:-/etc/mautrix/whatsapp.yaml}
+MAUTRIX_WHATSAPP_USER=${MAUTRIX_WHATSAPP_USER:-matrix}
+MAUTRIX_WHATSAPP_GROUP=${MAUTRIX_WHATSAPP_GROUP:-matrix}
+
+name="Matrix WhatsApp bridge"
+
+pidfile="/run/mautrix-whatsapp.pid"
+command="/usr/bin/mautrix-whatsapp"
+command_args="-c ${MAUTRIX_WHATSAPP_CONFIG}"
+command_background="true"
+command_user="${MAUTRIX_WHATSAPP_USER}:${MAUTRIX_WHATSAPP_GROUP}"
+retry=30
+
+required_files="${MAUTRIX_WHATSAPP_CONFIG}"
+
+depend() {
+	use dns
+	need matrix-homeserver
+	need net
+}
