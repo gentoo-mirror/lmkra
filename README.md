@@ -2,6 +2,8 @@
 
 My personal gentoo overlay.
 Current content:
+
+```
 .
 ├── acct-group
 │   └── matrix
@@ -15,5 +17,6 @@ Current content:
     ├── mautrix-common
     ├── mautrix-facebook
     └── mautrix-whatsapp
+```
 
 Any contributions / suggestions are very much welcome.
