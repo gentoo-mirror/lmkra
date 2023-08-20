@@ -1,0 +1,3 @@
+#!/usr/bin/env python
+
+import mautrix_facebook.__main__

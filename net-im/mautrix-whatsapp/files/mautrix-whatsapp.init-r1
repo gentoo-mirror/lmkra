@@ -5,6 +5,7 @@
 MAUTRIX_WHATSAPP_CONFIG=${MAUTRIX_WHATSAPP_CONFIG:-/etc/mautrix/whatsapp.yaml}
 MAUTRIX_WHATSAPP_USER=${MAUTRIX_WHATSAPP_USER:-matrix}
 MAUTRIX_WHATSAPP_GROUP=${MAUTRIX_WHATSAPP_GROUP:-matrix}
+MAUTRIX_WHATSAPP_REGISTRATION_FILE=${MAUTRIX_WHATSAPP_REGISTRATION_FILE:-${TMPDIR}/whatsapp_reg.yaml}
 
 name="Matrix WhatsApp bridge"
 
@@ -14,6 +15,7 @@ command_args="-c ${MAUTRIX_WHATSAPP_CONFIG}"
 command_background="true"
 command_user="${MAUTRIX_WHATSAPP_USER}:${MAUTRIX_WHATSAPP_GROUP}"
 retry=30
+extra_commands="generate"
 
 required_files="${MAUTRIX_WHATSAPP_CONFIG}"
 
@@ -21,4 +23,8 @@ depend() {
 	use dns
 	need matrix-homeserver
 	need net
+}
+
+generate() {
+	${command} ${command_args} -g -r "${MAUTRIX_WHATSAPP_REGISTRATION_FILE}"
 }

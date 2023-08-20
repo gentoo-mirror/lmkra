@@ -50,10 +50,12 @@ src_install() {
 	newinitd "${FILESDIR}"/mautrix-whatsapp.init-r1 mautrix-whatsapp
 
 	dobin mautrix-whatsapp
-	insinto /etc/mautrix
-	newins example-config.yaml whatsapp.yaml
-	fowners matrix:matrix /etc/mautrix/whatsapp.yaml
-	fperms 755 /etc/mautrix/whatsapp.yaml
+	insinto /etc/mautrix/whatsapp
+	newins example-config.yaml config.yaml
+	fowners matrix:matrix /etc/mautrix/whatsapp/config.yaml
+	fperms 644 /etc/mautrix/whatsapp/config.yaml
+
+	docompress -x /usr/share/doc/${PF}/example-config.yaml
 
 	dodoc example-config.yaml
 }
