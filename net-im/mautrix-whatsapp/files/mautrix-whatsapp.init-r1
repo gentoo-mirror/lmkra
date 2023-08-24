@@ -23,6 +23,7 @@ depend() {
 	use dns
 	need matrix-homeserver
 	need net
+	need postgresql
 }
 
 generate() {
