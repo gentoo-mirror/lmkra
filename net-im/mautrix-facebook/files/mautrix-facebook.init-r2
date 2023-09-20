@@ -1,0 +1,31 @@
+#!/sbin/openrc-run
+# Copyright 2023 lmkra
+# Distributed under the terms of GNU General Public License v3
+
+MAUTRIX_FACEBOOK_CONFIG=${MAUTRIX_FACEBOOK_CONFIG:-/etc/mautrix/facebook/config.yaml}
+MAUTRIX_FACEBOOK_USER=${MAUTRIX_FACEBOOK_USER:-matrix}
+MAUTRIX_FACEBOOK_GROUP=${MAUTRIX_FACEBOOK_GROUP:-matrix}
+MAUTRIX_FACEBOOK_REGISTRATION_FILE=${MAUTRIX_FACEBOOK_REGISTRATION_DIR:-/tmp/facebook_reg.yaml}
+
+name="Matrix Facebook Messenger bridge"
+
+pidfile="/run/mautrix-facebook.pid"
+command="/usr/bin/mautrix-facebook"
+command_args="-c ${MAUTRIX_FACEBOOK_CONFIG}"
+command_background="true"
+command_user="${MAUTRIX_FACEBOOK_USER}:${MAUTRIX_FACEBOOK_GROUP}"
+retry=30
+extra_commands="generate"
+
+required_files="${MAUTRIX_FACEBOOK_CONFIG}"
+
+depend() {
+	use dns
+	need matrix-homeserver
+	need net
+	need postgresql
+}
+
+generate() {
+	${command} ${command_args} -g -r "${MAUTRIX_FACEBOOK_REGISTRATION_FILE}"
+}
