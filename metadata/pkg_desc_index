@@ -6,3 +6,4 @@ net-im/conduit 0.6.0 9999: Matrix homeserver written in Rust
 net-im/mautrix-common 0.2: Common parts of Mautrix bridges
 net-im/mautrix-facebook 0.5.0 0.5.1: A Matrix-Facebook Messenger puppeting bridge
 net-im/mautrix-whatsapp 0.10.1 0.10.2: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
+www-apps/kanboard 1.2.32: Kanboard is a free and open source Kanban project management software
