@@ -24,6 +24,7 @@ IUSE="debug"
 
 RDEPEND="
 "
-BDEPEND="dev-python/cython[${PYTHON_USEDEP}]"
+BDEPEND=">=dev-python/cython-0.29.24[${PYTHON_USEDEP}]
+	<dev-python/cython-0.30.0[${PYTHON_USEDEP}]"
 
 distutils_enable_tests pytest
