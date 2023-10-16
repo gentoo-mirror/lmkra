@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prerm setup
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) app-admin/webapp-config
+DESCRIPTION=Kanboard is a free and open source Kanban project management software
+EAPI=8
+HOMEPAGE=https://kanboard.org
+INHERIT=webapp
+IUSE=curl mysql ldap postgres sqlite zip vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=dev-lang/php[ctype,curl?,filter,gd,mysql?,ldap?,pdo,postgres?,session,simplexml,sqlite?,ssl,xml,zip?] virtual/httpd-php app-admin/webapp-config
+SLOT=1.2.33
+SRC_URI=https://github.com/kanboard/kanboard/archive/refs/tags/v1.2.33.tar.gz -> kanboard-1.2.33.tar.gz
+_eclasses_=webapp	1aad5c010cfdf11d0376c80467b0de4c
+_md5_=b34a9c5e01e39a314b7187b6969e9c54
