@@ -1,10 +1,10 @@
 acct-group/matrix 0: System group: matrix
 acct-user/matrix 0: User for all Matrix-related daemons
 dev-python/asyncpg 0.27.0-r1 0.28.0: database library for PostgreSQL and asyncio
-dev-python/mautrix 0.20.2: A Python 3.8+ asyncio Matrix framework
+dev-python/mautrix 0.20.3: A Python 3.8+ asyncio Matrix framework
 net-im/conduit 0.6.0 9999: Matrix homeserver written in Rust
 net-im/mautrix-common 0.2: Common parts of Mautrix bridges
 net-im/mautrix-facebook 0.5.1: A Matrix-Facebook Messenger puppeting bridge
-net-im/mautrix-whatsapp 0.10.3: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
+net-im/mautrix-whatsapp 0.10.4: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
 www-apps/homer 23.10.1: A dead simple static HOMepage for your servER to keep your services on hand
 www-apps/kanboard 1.2.33: Kanboard is a free and open source Kanban project management software
