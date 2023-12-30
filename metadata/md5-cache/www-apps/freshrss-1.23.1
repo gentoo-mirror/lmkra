@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst prepare prerm setup
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) app-admin/webapp-config
+DESCRIPTION=FreshRSS is a self-hosted RSS feed aggregator
+EAPI=8
+HOMEPAGE=https://freshrss.org
+INHERIT=webapp
+IUSE=gmp iconv mysql postgres sqlite zip zlib vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=MIT
+RDEPEND=dev-lang/php[gmp?,iconv?,mysql?,pdo,postgres?,sqlite?,zip?,zlib?] virtual/httpd-php app-admin/webapp-config
+SLOT=1.23.1
+SRC_URI=https://github.com/freshrss/freshrss/archive/refs/tags/1.23.1.tar.gz -> freshrss-1.23.1.tar.gz
+_eclasses_=webapp	de2d3d345b44597c10d7104a7bcdf7b2
+_md5_=bc7ec4cd146dcc44e404acec3b0ba5e2
