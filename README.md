@@ -19,6 +19,7 @@ Current content:
 │   └── mautrix-whatsapp
 └── www-apps
     ├── homer
+    ├── freshrss
     └── kanboard
 
 ```
