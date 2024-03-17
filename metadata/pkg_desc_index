@@ -5,7 +5,7 @@ dev-python/mautrix 0.20.3: A Python 3.8+ asyncio Matrix framework
 net-im/conduit 0.6.0 9999: Matrix homeserver written in Rust
 net-im/mautrix-common 0.2: Common parts of Mautrix bridges
 net-im/mautrix-facebook 0.5.1: A Matrix-Facebook Messenger puppeting bridge
-net-im/mautrix-whatsapp 0.10.5: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
+net-im/mautrix-whatsapp 0.10.6: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
 www-apps/freshrss 1.23.1: FreshRSS is a self-hosted RSS feed aggregator
 www-apps/homer 24.02.1: A dead simple static HOMepage for your servER to keep your services on hand
 www-apps/kanboard 1.2.35: Kanboard is a free and open source Kanban project management software
