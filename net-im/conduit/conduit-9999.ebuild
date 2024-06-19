@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cargo git-r3
+inherit cargo git-r3 llvm
 
 DESCRIPTION="Matrix homeserver written in Rust"
 HOMEPAGE="https://gitlab.com/famedly/conduit"
@@ -19,7 +19,10 @@ IUSE="jemalloc +rocksdb +sqlite"
 
 RDEPEND="acct-user/matrix"
 DEPEND="${RDEPEND}"
-BDEPEND="sys-devel/clang >=dev-lang/rust-1.70.0"
+BDEPEND="
+	sys-devel/clang
+	>=virtual/rust-1.78.0
+"
 
 QA_FLAGS_IGNORED="usr/bin/${PN}"
 
