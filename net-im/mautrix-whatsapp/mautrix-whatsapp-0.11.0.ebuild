@@ -42,7 +42,9 @@ src_unpack() {
 }
 
 src_compile() {
-	ego build
+	ego build ./cmd/mautrix-whatsapp
+	einfo "Generating example config"
+	./mautrix-whatsapp -e
 }
 
 src_install() {
@@ -51,11 +53,10 @@ src_install() {
 
 	dobin mautrix-whatsapp
 	insinto /etc/mautrix/whatsapp
-	newins example-config.yaml config.yaml
+	doins config.yaml
 	fowners matrix:matrix /etc/mautrix/whatsapp/config.yaml
 	fperms 644 /etc/mautrix/whatsapp/config.yaml
 
+	newdoc config.yaml example-config.yaml
 	docompress -x /usr/share/doc/${PF}/example-config.yaml
-
-	dodoc example-config.yaml
 }
