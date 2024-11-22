@@ -403,7 +403,7 @@ DEPEND="${RDEPEND}"
 RDEPEND="acct-user/matrix"
 BDEPEND="
 	sys-devel/clang
-	>=virtual/rust-1.78.0
+	>=dev-lang/rust-1.78.0
 "
 
 # rust does not use *FLAGS from make.conf, silence portage warning
