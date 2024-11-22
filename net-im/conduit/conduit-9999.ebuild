@@ -21,7 +21,7 @@ RDEPEND="acct-user/matrix"
 DEPEND="${RDEPEND}"
 BDEPEND="
 	sys-devel/clang
-	>=virtual/rust-1.78.0
+	>=dev-lang/rust-1.78.0
 "
 
 QA_FLAGS_IGNORED="usr/bin/${PN}"
