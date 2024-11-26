@@ -380,7 +380,7 @@ declare -A GIT_CRATES=(
 	[ruma]="https://github.com/ruma/ruma;ef40b184b7410a93e933b4ad719a72aea1bdd20e;ruma-%commit%/crates/ruma"
 )
 
-inherit cargo llvm
+inherit cargo rust
 
 DESCRIPTION="A Matrix homeserver written in Rust"
 HOMEPAGE="https://gitlab.com/famedly/conduit"
@@ -424,6 +424,7 @@ src_configure() {
 		myfeatures+=('backend_sqlite')
 	fi
 
+	rust_pkg_setup
 	cargo_src_configure --no-default-features
 }
 

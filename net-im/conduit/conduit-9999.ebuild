@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cargo git-r3 llvm
+inherit cargo git-r3 rust
 
 DESCRIPTION="Matrix homeserver written in Rust"
 HOMEPAGE="https://gitlab.com/famedly/conduit"
@@ -45,6 +45,7 @@ src_configure() {
 		myfeatures+=('backend_sqlite')
 	fi
 
+	rust_pkg_setup
 	cargo_src_configure --frozen --no-default-features
 }
 
