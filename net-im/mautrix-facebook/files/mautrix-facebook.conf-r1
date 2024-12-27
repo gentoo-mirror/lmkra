@@ -1,8 +1,0 @@
-# configuration file
-#MAUTRIX_FACEBOOK_CONFIG="/etc/mautrix/facebook/config.yaml"
-#MAUTRIX_FACEBOOK_CONFIG_BASE="/etc/mautrix/facebook/example-config.yaml"
-#MAUTRIX_FACEBOOK_REGISTRATION_FILE="/tmp/facebook_reg.yaml"
-
-# run mautrix-facebook process as following user/group
-#MAUTRIX_FACEBOOK_USER=matrix
-#MAUTRIX_FACEBOOK_USER=matrix

@@ -21,7 +21,6 @@ fi
 
 LICENSE="AGPL-3"
 SLOT="0"
-IUSE=""
 
 RDEPEND="net-im/mautrix-common
 	dev-libs/olm
@@ -30,7 +29,6 @@ RDEPEND="net-im/mautrix-common
 	media-video/ffmpeg"
 DEPEND="dev-lang/go
 ${RDEPEND}"
-BDEPEND=""
 
 src_unpack() {
 	if [[ ${PV} == *9999 ]]; then

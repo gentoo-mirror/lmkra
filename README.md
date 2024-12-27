@@ -9,18 +9,17 @@ Current content:
 │   └── matrix
 ├── acct-user
 │   └── matrix
-├── dev-python
-│   ├── asyncpg
-│   └── mautrix
+├── net-analyzer
+│   └── speedtest-go
 ├── net-im
 │   ├── conduit
 │   ├── mautrix-common
-│   ├── mautrix-facebook
 │   └── mautrix-whatsapp
 └── www-apps
-    ├── homer
     ├── freshrss
+    ├── homer
     └── kanboard
+
 
 ```
 

@@ -6,15 +6,14 @@ EAPI=8
 DESCRIPTION="Common parts of Mautrix bridges"
 HOMEPAGE="https://github.com/mautrix"
 
+S=${WORKDIR}
+
 LICENSE="AGPL-3"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
 DEPEND="acct-user/matrix"
 RDEPEND="${DEPEND}"
-BDEPEND=""
-
-S=${WORKDIR}
 
 src_install() {
 		keepdir /var/log/mautrix
