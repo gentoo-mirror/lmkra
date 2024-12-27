@@ -15,16 +15,14 @@ if [[ ${PV} == *9999 ]]; then
 else
 	SRC_URI="https://github.com/showwin/speedtest-go/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz
 		https://lmkra.eu/gentoo/speedtest-go-${PV}-deps.tar.xz"
-	S="${WORKDIR}/speedtest-${PV}"
+	S="${WORKDIR}/speedtest-go-${PV}"
 	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 DEPEND="dev-lang/go"
-BDEPEND=""
 
 src_unpack() {
 	if [[ ${PV} == *9999 ]]; then
@@ -41,5 +39,5 @@ src_compile() {
 
 src_install() {
 	dobin speedtest-go
-	dodoc -r examples
+	dodoc -r example
 }
