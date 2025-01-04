@@ -22,7 +22,7 @@ IUSE="gmp
 	zlib
 	"
 
-RDEPEND="dev-lang/php[gmp?,iconv?,mysql?,pdo,postgres?,sqlite?,zip?,zlib?]
+RDEPEND=">=dev-lang/php-8.1[gmp?,iconv?,mysql?,pdo,postgres?,sqlite?,zip?,zlib?]
 	virtual/httpd-php"
 
 need_httpd_cgi
