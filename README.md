@@ -13,6 +13,7 @@ Current content:
 │   └── speedtest-go
 ├── net-im
 │   ├── conduit
+│   ├── conduwuit
 │   ├── mautrix-common
 │   └── mautrix-whatsapp
 └── www-apps

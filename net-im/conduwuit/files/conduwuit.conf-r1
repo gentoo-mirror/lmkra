@@ -1,0 +1,9 @@
+# conduwuit configuration file
+#CONDUWUIT_CONFIG="/etc/conduwuit/conduwuit.toml"
+
+# conduwuit log location
+#CONDUWUIT_LOG_DIR=/var/log/conduwuit
+
+# run conduwuit process as following user/group
+#CONDUWUIT_USER=matrix
+#CONDUWUIT_GROUP=matrix

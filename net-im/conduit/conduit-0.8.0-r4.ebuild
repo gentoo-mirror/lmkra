@@ -398,8 +398,11 @@ KEYWORDS="~amd64"
 # skipped systemd support for now
 IUSE="jemalloc +rocksdb +sqlite"
 
+RDEPEND="
+	acct-user/matrix
+	!net-im/conduwuit
+"
 DEPEND="${RDEPEND}"
-RDEPEND="acct-user/matrix"
 BDEPEND="
 	llvm-core/clang
 	>=dev-lang/rust-1.78.0:*
