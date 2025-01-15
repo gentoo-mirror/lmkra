@@ -1,0 +1,7 @@
+/var/log/conduwuit/*.log {
+	missingok
+	compress
+	notifempty
+	copytruncate
+	minsize 1M
+}

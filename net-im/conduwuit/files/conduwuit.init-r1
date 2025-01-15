@@ -1,0 +1,27 @@
+#!/sbin/openrc-run
+# Copyright 2023 lmkra
+# Distributed under the terms of GNU General Public License v3
+
+CONDUWUIT_CONFIG=${CONDUWUIT_CONFIG:-/etc/conduwuit/conduwuit.toml}
+CONDUWUIT_LOG_DIR=${CONDUWUIT_LOG_DIR:-/var/log/conduwuit}
+CONDUWUIT_USER=${CONDUWUIT_USER:-matrix}
+CONDUWUIT_GROUP=${CONDUWUIT_GROUP:-matrix}
+
+name="conduwuit"
+
+pidfile="/run/conduit.pid"
+command="/usr/bin/conduit"
+command_background="true"
+command_user="${CONDUWUIT_USER}:${CONDUWUIT_GROUP}"
+output_log="${CONDUWUIT_LOG_DIR}/conduit.log"
+error_log="${CONDUWUIT_LOG_DIR}/conduit.log"
+start_stop_daemon_args="${start_stop_daemon_args} -e CONDUIT_CONFIG=${CONDUWUIT_CONFIG}"
+retry=30
+
+required_files="${CONDUWUIT_CONFIG}"
+
+depend() {
+	use dns
+	need net
+	provide matrix-homeserver
+}

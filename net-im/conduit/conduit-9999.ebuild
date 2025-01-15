@@ -17,7 +17,10 @@ SLOT="0"
 # skipped systemd support for now
 IUSE="jemalloc +rocksdb +sqlite"
 
-RDEPEND="acct-user/matrix"
+RDEPEND="
+	acct-user/matrix
+	!net-im/conduwuit
+"
 DEPEND="${RDEPEND}"
 BDEPEND="
 	llvm-core/clang
