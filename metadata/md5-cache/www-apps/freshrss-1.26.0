@@ -8,7 +8,7 @@ IUSE=gmp iconv mysql postgres sqlite zip zlib vhosts
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 RDEPEND=>=dev-lang/php-8.1[gmp?,iconv?,mysql?,pdo,postgres?,sqlite?,zip?,zlib?] virtual/httpd-php app-admin/webapp-config
-SLOT=1.25.0
-SRC_URI=https://github.com/freshrss/freshrss/archive/refs/tags/1.25.0.tar.gz -> freshrss-1.25.0.tar.gz
+SLOT=1.26.0
+SRC_URI=https://github.com/freshrss/freshrss/archive/refs/tags/1.26.0.tar.gz -> freshrss-1.26.0.tar.gz
 _eclasses_=webapp	5fa840db95fc7348dfd53b8526ed05f5
 _md5_=45618a2498bdd003e62e91914ae3db86
