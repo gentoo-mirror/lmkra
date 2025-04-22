@@ -1,0 +1,15 @@
+BDEPEND=app-arch/unzip
+DEFINED_PHASES=install postinst prerm setup unpack
+DEPEND=|| ( virtual/httpd-basic virtual/httpd-cgi virtual/httpd-fastcgi ) app-admin/webapp-config
+DESCRIPTION=A dead simple static HOMepage for your servER to keep your services on hand
+EAPI=8
+HOMEPAGE=https://github.com/bastienwirtz/homer
+INHERIT=webapp
+IUSE=vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=Apache-2.0
+RDEPEND=app-admin/webapp-config
+SLOT=25.04.1
+SRC_URI=https://github.com/bastienwirtz/homer/releases/download/v25.04.1/homer.zip -> homer-25.04.1.zip
+_eclasses_=webapp	5fa840db95fc7348dfd53b8526ed05f5
+_md5_=26b2da0d6177fd3eea1534de8c1b301a

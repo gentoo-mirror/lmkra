@@ -4,7 +4,7 @@ net-analyzer/speedtest-go 1.7.10: Full-featured Command Line Interface and pure 
 net-im/conduit 0.8.0-r4 9999: Matrix homeserver written in Rust
 net-im/conduwuit 0.4.6 9999: a very cool fork of Conduit, a Matrix homeserver written in Rust
 net-im/mautrix-common 0.2: Common parts of Mautrix bridges
-net-im/mautrix-whatsapp 0.11.4: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
+net-im/mautrix-whatsapp 0.12.0: A Matrix-WhatsApp puppeting bridge based on whatsmeow.
 www-apps/freshrss 1.26.0: FreshRSS is a self-hosted RSS feed aggregator
-www-apps/homer 25.03.3: A dead simple static HOMepage for your servER to keep your services on hand
+www-apps/homer 25.04.1: A dead simple static HOMepage for your servER to keep your services on hand
 www-apps/kanboard 1.2.44: Kanboard is a free and open source Kanban project management software
